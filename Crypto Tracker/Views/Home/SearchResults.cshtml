@@ -1,0 +1,36 @@
+﻿@model CryptoViewModel
+
+@if (Model != null)
+{
+    <h2>Search Results</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Market Cap</th>
+                <th>Circulating Supply</th>
+                <th>Max Supply</th>
+                <th>Volume (24h)</th>
+                <th>%Change (24h)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.rank</td>
+                <td>@Model.name</td>
+                <td>@Model.symbol</td>
+                <td>@Model.priceUsd</td>
+                <td>@Model.marketCapUsd</td>
+                <td>@Model.supply</td>
+                <td>@Model.maxSupply</td>
+                <td>@Model.volumeUsd24Hr</td>
+                <td>@Model.changePercent24Hr</td>
+            </tr>
+        </tbody>
+    </table>
+
+    @Html.ActionLink("Back to Home", "Index", "Home", null, new { @class = "btn btn-primary" })
+}

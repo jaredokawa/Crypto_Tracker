@@ -1,0 +1,37 @@
+﻿@model List<CryptoViewModel>
+
+@if (Model != null && Model.Any())
+{
+    <h2>Top 200 Cryptocurrencies</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Market Cap</th>
+                <th>Circulating Supply</th>
+                <th>Max Supply</th>
+                <th>Volume (24h)</th>
+                <th>%Change (24h)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var crypto in Model)
+            {
+                <tr>
+                    <td>@crypto.rank</td>
+                    <td>@crypto.name</td>
+                    <td>@crypto.symbol</td>
+                    <td>@crypto.priceUsd</td>
+                    <td>@crypto.marketCapUsd</td>
+                    <td>@crypto.supply</td>
+                    <td>@crypto.maxSupply</td>
+                    <td>@crypto.volumeUsd24Hr</td>
+                    <td>@crypto.changePercent24Hr</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

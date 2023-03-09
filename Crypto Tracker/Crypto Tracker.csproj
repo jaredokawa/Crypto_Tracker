@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Crypto_Tracker</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Crypto - Copy\**" />
+    <Compile Remove="Views\Crypto\**" />
+    <Content Remove="Views\Crypto - Copy\**" />
+    <Content Remove="Views\Crypto\**" />
+    <EmbeddedResource Remove="Views\Crypto - Copy\**" />
+    <EmbeddedResource Remove="Views\Crypto\**" />
+    <None Remove="Views\Crypto - Copy\**" />
+    <None Remove="Views\Crypto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Chg24h.cs" />
+    <Compile Remove="Models\Chg7d.cs" />
+    <Compile Remove="Models\Coin.cs" />
+    <Compile Remove="Models\CryptoDatum.cs" />
+    <Compile Remove="Models\CryptoHeaderInfo.cs" />
+    <Compile Remove="Models\MajorCurrency.cs" />
+    <Compile Remove="Models\MarketCap.cs" />
+    <Compile Remove="Models\RangeFilters.cs" />
+    <Compile Remove="Models\Roi.cs" />
+    <Compile Remove="Models\Root.cs" />
+    <Compile Remove="Models\ScreenData.cs" />
+    <Compile Remove="Models\TotalVolume.cs" />
+    <Compile Remove="Models\Volume24h.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    <PackageReference Include="MySql.Data" Version="8.0.32" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="RestSharp" Version="108.0.3" />
+  </ItemGroup>
+
+</Project>
